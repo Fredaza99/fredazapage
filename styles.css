@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root {
+    /* Tons de Azul */
+    --ciano-claro: #e0f7fa;
+    
+    --ciano-medio: #26c6da;
+    
+    --ciano-escuro: #006064;
+    
+
+    /* Tons de Roxo */
+    --roxo-claro: #f3e5f5;
+    
+    --roxo-medio: #ba68c8;
+    
+    --roxo-escuro: #6a1b9a;
+    
+
+    /* Neutros */
+    --fundo-escuro: #121212;
+    
+    --fundo-claro: #ffffff;
+    
+    --texto-claro: #e0e0e0;
+    
+    --texto-escuro: #212121;
+    
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo */
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: #000000;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* Header */
+header {
+    overflow-x: hidden;
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    opacity: 0.9;
+    padding: 15px 8px;
+    z-index: 1000;
+    box-shadow: 0 1.5px 1.5px #006064;
+    margin: 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-left: 10px;
+}
+
+header .logo img {
+ width: 210px;
+ height: auto;
+ padding: 0;
+}
+
+header .logo a:hover {
+    color: #fff;
+}
+
+header nav ul {
+    margin-left:500px;
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+header nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--ciano-medio);
+}
+
+header .original-buton {
+    margin-right:none;
+    margin-left:0;
+    background: #000000;
+    background-image: -webkit-linear-gradient(top, #000000, #000000);
+    background-image: -moz-linear-gradient(top, #000000, #000000);
+    background-image: -ms-linear-gradient(top, #000000, #000000);
+    background-image: -o-linear-gradient(top, #000000, #000000);
+    background-image: linear-gradient(to bottom, #000000, #000000);
+    -webkit-border-radius: 30;
+    -moz-border-radius: 30;
+    border-radius: 30px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 17px;
+    padding: 6px 20px 6px 20px;
+    border: solid #26c6da 1px;
+    text-decoration: none;
+}
+.original-buton a {
+font-family: "Roboto", serif;
+font-weight: light; 
+text-decoration: none;
+ color: #ffffff;
+}
+
+.original-buton:hover {
+    background: #006064;
+        background-image: -webkit-linear-gradient(top, #006064, #26c6da);
+        background-image: -moz-linear-gradient(top, #006064, #26c6da);
+        background-image: -ms-linear-gradient(top, #006064, #26c6da);
+        background-image: -o-linear-gradient(top, #006064, #26c6da);
+        background-image: linear-gradient(to bottom, #006064, #26c6da);
+        text-decoration: none;
+}
+
+
+
+/* Sobre Mim */
+#about {
+    background: linear-gradient(to bottom, #00000037, #1a1a2e, #1a1a2e, #333);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    z-index:20;
+    min-height: 70vh;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.download-resume {
+    padding: 10px 20px;
+    background-color: var(--ciano-escuro);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.download-resume:hover {
+    background-color: var(--ciano-escuro);
+}
+
+.skills-section {
+    background: linear-gradient(to top, #00000000 , #1a1a2e, #333);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.skills-section h2 {
+    font-family: "Bebas Neue", serif;
+    font-weight: lighter;
+    font-size: 2.5rem;
+    margin-bottom: 115px;
+}
+
+.skills-grid {
+    display:inline-flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+.skill {
+    text-align: center;
+}
+
+.skill .circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px auto;
+}
+
+.circle svg {
+    width: 100px;
+    height: 100px;
+    transform: rotate(-90deg);
+}
+
+.circle circle {
+    fill: none;
+    stroke-width: 10;
+    cx: 50;
+    cy: 50;
+    r: 45;
+    stroke: #333;
+}
+
+.circle .progress {
+    stroke: #26c6da;
+    /* Cor do progresso */
+    stroke-dasharray: 283;
+    /* Circunferência do círculo (2 * π * r) */
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.circle img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+}
+
+/* Portfólio */
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Contato */
+#contact {
+    background: #070511;
+    padding: 50px 0;
+}
+
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente no centro */
+    justify-content: center;
+    /* Garante alinhamento horizontal */
+    min-height: 100vh;
+    /* Ocupa a altura inteira da viewport */
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Espaça os itens horizontalmente */
+    gap: 20px;
+    /* Espaçamento entre texto e imagem */
+    max-width: 1200px;
+    /* Limita a largura máxima do conteúdo */
+    width: 100%;
+    /* Garante que ocupe toda a largura disponível */
+}
+
+.hero-text {
+    flex: 1;
+    /* Faz o texto ocupar espaço proporcional */
+    text-align: left;
+    /* Alinha o texto à esquerda */
+}
+
+.illustration {
+    flex: 1;
+    /* Faz a imagem ocupar espaço proporcional */
+    display: flex;
+    justify-content: center;
+    /* Centraliza a imagem dentro do bloco */
+}
+
+.hero-gif {
+    max-width: 100%;
+    height: auto;
+    max-height: 500px;
+    padding-bottom: 20px;
+    margin-top: 90px;
+}
+
+.hero-text h1 {
+    font-family: "Bebas Neue", serif;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: var(--ciano-medio);
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: var(--ciano-escuro);
+    color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: var(--ciano-escuro);
+}
+
+/* Gradiente na parte superior esquerda */
+.gradient-top {
+    position: absolute;
+    top: -50px !important;
+    left: -50px;
+    width: 250px;
+    height: 290px;
+    z-index: 2;
+    background: radial-gradient(circle at top left, rgba(169, 159, 166, 0.713), transparent 70%);
+
+}
+
+.gradient-bot {
+    position: absolute;
+    top: 200px;
+    left: 1020px;
+    width: 250px;
+    height: 280px;
+    z-index: 2;
+    background: radial-gradient(circle, #26c5da1f, transparent 62%);
+
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .gif-container,
+    .hero-text {
+        max-width: 100%;
+    }
+
+    .hero-text {
+        margin-top: 20px;
+    }
+}
+
+
+#backgroundCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Coloca o canvas atrás do conteúdo */
+}
+
+

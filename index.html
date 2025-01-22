@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo-vector.svg" href="#home"></img>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="original-buton">
+                <a href="#contact" role="button">Solicitar Orçamento</a>
+            </div>
+        </div>
+    </header>
+<div class="hero-section">
+    <canvas id="backgroundCanvas"></canvas> <!-- Canvas como fundo -->
+    <div class="gradient-top"></div>
+
+    <!-- Conteúdo principal -->
+    <div class="content">
+        <div class="hero-text">
+            <h1>I build things for <br>the web.</h1>
+            <p>Transformando ideias em sites responsivos e sistemas funcionais.</p>
+            <button class="cta-button">Contacte Agora</button>
+        </div>
+        <div class="illustration">
+            <img src="img/Website designer-amico.png" alt="Ilustração de desenvolvedor" class="hero-gif">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <!-- Sobre Mim -->
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>A brief bio about your experience and skills.</p>
+            <button class="download-resume">Download Resume</button>
+        </div>
+    </section>
+
+
+
+<section id="skills" class="skills-section">
+    <h2>Minhas Habilidades</h2>
+    <div class="skills-grid">
+        <div class="skill">
+            <div class="circle">
+                <svg>
+                    <circle cx="50" cy="50" r="45"></circle>
+                    <circle cx="50" cy="50" r="45" class="progress"></circle>
+                </svg>
+                <img src="img/icons8-html-48.png" alt="HTML Icon">
+            </div>
+            <p>HTML</p>
+        </div>
+        <div class="skill">
+            <div class="circle">
+                <svg>
+                    <circle cx="50" cy="50" r="45"></circle>
+                    <circle cx="50" cy="50" r="45" class="progress"></circle>
+                </svg>
+                <img src="img/icons8-css-48.png" alt="CSS Icon">
+            </div>
+            <p>CSS</p>
+        </div>
+                <div class="skill">
+                    <div class="circle">
+                        <svg>
+                            <circle cx="50" cy="50" r="45"></circle>
+                            <circle cx="50" cy="50" r="45" class="progress"></circle>
+                        </svg>
+                        <img src="img/icons8-react-40.png" alt="React Icon">
+                    </div>
+                    <p>React</p>
+                </div>
+                <div class="skill">
+                    <div class="circle">
+                        <svg>
+                            <circle cx="50" cy="50" r="45"></circle>
+                            <circle cx="50" cy="50" r="45" class="progress"></circle>
+                        </svg>
+                        <img src="img/icons8-firebase-48.png" alt="React Icon">
+                    </div>
+                    <p>Firebase</p>
+                </div>
+            <div class="skill">
+                <div class="circle">
+                    <svg>
+                        <circle cx="50" cy="50" r="45"></circle>
+                        <circle cx="50" cy="50" r="45" class="progress"></circle>
+                    </svg>
+                    <img src="img/icons8-javascript-48.png" alt="CSS Icon">
+                </div>
+                <p>Javascript</p>
+            </div>
+            <div class="skill">
+                <div class="circle">
+                    <svg>
+                        <circle cx="50" cy="50" r="45"></circle>
+                        <circle cx="50" cy="50" r="45" class="progress"></circle>
+                    </svg>
+                    <img src="img/icons8-python-48.png" alt="CSS Icon">
+                </div>
+                <p>Python</p>
+            </div>
+            </div>
+            
+
+</section>
+
+    <!-- Portfólio -->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="project1.png" alt="Projeto 1">
+                    <p>Project 1</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="project2.png" alt="Projeto 2">
+                    <p>Project 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <footer id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <button class="cta-button">Send Message</button>
+
+        </div>
+        <a href="https://storyset.com/people">People illustrations by Storyset</a>
+    </footer>
+<script>
+ const canvas = document.getElementById("backgroundCanvas");
+    const ctx = canvas.getContext("2d");
+    const colors = ["rgba(255, 255, 255, ALPHA)", "rgba(173, 216, 230, ALPHA)", "rgba(255, 223, 0, ALPHA)"];
+
+
+
+    // Ajusta o tamanho do canvas
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    // Configurações das estrelas
+    const stars = [];
+    const totalStars = 1000; // Número total de estrelas
+
+    // Inicializa as estrelas
+    function createStars() {
+        for (let i = 0; i < totalStars; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                radius: Math.random() * 2, // Tamanho aleatório
+                alpha: Math.random(), // Brilho inicial
+                alphaChange: Math.random() * 0.02 - 0.01, // Velocidade de mudança do brilho
+            });
+        }
+    }
+
+    // Atualiza o brilho das estrelas
+    function updateStars() {
+        stars.forEach((star) => {
+            star.alpha += star.alphaChange;
+
+            // Inverte o brilho ao atingir os limites
+            if (star.alpha <= 0 || star.alpha >= 1) {
+                star.alphaChange *= -1;
+            }
+        });
+    }
+
+    // Desenha as estrelas no canvas
+    function drawStars() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = "rgba(0, 0, 0, 1)";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        stars.forEach((star) => {
+            ctx.beginPath();
+            ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`; // Brilho dinâmico
+            ctx.fill();
+        });
+    }
+
+
+    // Loop de animação
+    function animate() {
+        updateStars();
+        drawStars();
+        requestAnimationFrame(animate);
+    }
+
+    createStars();
+    animate();
+
+
+    window.addEventListener("scroll", () => {
+            const scrollOffset = window.scrollY * 0.3; // Velocidade do paralaxe
+            canvas.style.transform = `translateY(${scrollOffset}px)`;
+        });
+
+
+
+</script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
