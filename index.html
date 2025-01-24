@@ -9,23 +9,46 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="img/logo-vector.svg" href="#home"></img>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#services">Serviços</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-            <div class="original-buton">
-                <a href="#contact" role="button">Entre em Contato</a>
-            </div>
+<header>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="img/logo-vector.svg" href="#home" alt="Logo">
         </div>
-    </header>
+
+        <!-- Menu Desktop -->
+        <nav class="menu-desktop">
+            <ul>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Botão Toggle (Mobile) -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+        <img src="img/menu-toggle.svg" alt="Abrir menu" width="32" height="32">
+
+        </button>
+
+        <!-- Menu Overlay (Mobile) -->
+        <div class="menu-overlay" id="menu-overlay">
+            <div class="menu-header">
+            <img src="img/svg-logo-mobile.svg" alt="Logo" class="menu-logo">
+                <span class="close-icon" id="close-icon">&times;</span>
+            </div>
+            <ul class="menu-links-mobile">
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
 <div class="hero-section">
     <canvas id="backgroundCanvas"></canvas> <!-- Canvas como fundo -->
     <div class="gradient-top"></div>
@@ -230,10 +253,9 @@
     animate();
 
 
-    window.addEventListener("scroll", () => {
-            const scrollOffset = window.scrollY * 0.3; // Velocidade do paralaxe
-            canvas.style.transform = `translateY(${scrollOffset}px)`;
-        });
+
+
+
 
 
 
