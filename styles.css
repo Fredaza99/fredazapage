@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap');
 :root {
     /* Tons de Azul */
     --ciano-claro: #e0f7fa;
@@ -58,6 +59,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
+    
 }
 
 /* Header */
@@ -152,7 +154,6 @@ text-decoration: none;
 
 
 
-/* Sobre Mim */
 #about {
     background: linear-gradient(to bottom, #00000037, #1a1a2e, #1a1a2e, #333);
     color: #fff;
@@ -181,7 +182,7 @@ text-decoration: none;
 }
 
 .skills-section {
-    background: linear-gradient(to top, #00000000 , #1a1a2e, #333);
+    background: linear-gradient(to top, #00000000 , #1a1a2e, #333333e8);
     color: #fff;
     text-align: center;
     padding: 60px 20px;
@@ -275,32 +276,52 @@ text-decoration: none;
     box-sizing: border-box;
 }
 
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 2s ease-out forwards;
+}
+
+/* Atrasos */
+.delay-1 {
+    animation-delay: 0.8s;
+    /* Meio segundo de atraso */
+}
+
+.delay-2 {
+    animation-delay: 0.9s;
+}
+
+.delay-3 {
+    animation-delay: 2;
+}
+
+/* Keyframes da Animação */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* Espaça os itens horizontalmente */
     gap: 20px;
-    /* Espaçamento entre texto e imagem */
     max-width: 1200px;
-    /* Limita a largura máxima do conteúdo */
     width: 100%;
-    /* Garante que ocupe toda a largura disponível */
 }
 
 .hero-text {
     flex: 1;
-    /* Faz o texto ocupar espaço proporcional */
     text-align: left;
-    /* Alinha o texto à esquerda */
 }
 
 .illustration {
     flex: 1;
-    /* Faz a imagem ocupar espaço proporcional */
     display: flex;
     justify-content: center;
-    /* Centraliza a imagem dentro do bloco */
 }
 
 .hero-gif {
@@ -313,17 +334,23 @@ text-decoration: none;
 
 .hero-text h1 {
     font-family: "Bebas Neue", serif;
-    font-size: 4rem;
+    font-size: 4.3rem;
     font-weight: 400;
     line-height: 1.1;
+    color: #ffffff;
+    margin-top: 100px;
+}
+
+.web-destaque{
     color: var(--ciano-medio);
-    margin-bottom: 10px;
 }
 
 .hero-text p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2rem;
+    font-weight: light;
+    font-size: 1.32rem;
     margin-bottom: 20px;
+    color: #fff;
 }
 
 .cta-button {
@@ -363,20 +390,64 @@ text-decoration: none;
 
 }
 
-/* Responsividade */
+/* Responsividade: Tela menor que 768px */
 @media (max-width: 768px) {
+
+
+    html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important;
+    width: 100%; 
+    }
+
+
+    header {
+            padding: 10px 20px;
+        }
+    
+        header ul,
+        .original-buton {
+            display: none !important;
+        }
+
+
+    .logo img{
+        width: 150px !important;
+        height: auto;
+    }
+
     .hero-section {
-        flex-direction: column;
+        flex-direction: column !important;
         text-align: center;
     }
-
-    .gif-container,
-    .hero-text {
-        max-width: 100%;
+    .content {
+        flex-direction: column;
     }
 
     .hero-text {
-        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top:5px;
+    }
+
+    .hero-text h1{
+        font-size: 3rem;
+    }
+
+    .hero-text p {
+        font-size:1.2rem;
+        line-height: 1.5;
+        margin-top: 10px;
+        font-weight: light;
+    }
+
+    .hero-gif {
+        max-width: 85%;
+        height: auto;
+        margin: 0 auto;
+        margin-top:15px
+        
     }
 }
 
